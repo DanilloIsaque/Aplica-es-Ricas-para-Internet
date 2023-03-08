@@ -1,2 +1,2 @@
-# Aplica-es-Ricas-para-Internet
+# Aplicaces-Ricas-para-Internet
 JS
