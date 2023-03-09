@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #div1{
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+#div2{
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+</style>
+<script>
+    var pesoTotal = 0;
+
+    function allowDrop(ev){
+            ev.preventDefault();
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("text", ev.target.id);
+           
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text")// tem q ser uma string;
+            ev.target.appendChild(document.getElementById(data));
+
+        }
+                //adicionar ou subtrair o peso da imagem ao peso totaL
+    if(ev.target.id === "div2")
+        {
+            pesoTotal+= parseInt(event.target.childNodes[0].getAttribute("data-peso"));  
+        }
+        else 
+            if(ev.target.id ==="div1"){
+            pesoTotal -= parseInt(event.target.childNodes[0].getAttribute("data-peso")); 
+            }
+            
+                //exibir o peso total na pagina
+                document.getElementById("pesoTotal").innerHTML = pesoTotal + 'kg';
+
+    function dragEnd(ev){
+        if(ev.target.parentNode.id != "div2"){
+            pesoTotal -= parseInt(ev.target.getAttribute("data-peso"));
+            
+            
+        }else if(ev.target.parentNode.id === "div2"){
+            pesoTotal += parseInt(ev.target.getAttribute("data-peso"));
+        }
+        document.getElementById("pesoTotal").innerHTML = pesoTotal + "kg";
+    }
+        
+</script>
+
+</head>
+<body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="imagem1" src="paisagem.jpg" data-peso = 30 draggable="true" ondragstart="drag(event)" 
+        ondragend="dragEnd(event)"  width="336" height="69"></div>
+    <p>
+        arraste a imagem para dentro do retângulo.
+    </p>
+    
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <p>o peso total é: <span id="pesoTotal"> </span></p>
+</body>
+</html>

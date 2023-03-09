@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>WebStorage</h1>
+    
+    <script>
+        if(sessionStorage.visitas)//se for verdadeiro, vai ser o valor q ja tem +1
+        {
+            sessionStorage.visitas = Number(sessionStorage.visitas)+1;
+        }else{
+            sessionStorage.setItem("visitas",1);
+        }
+        document.write("Visitas: "+sessionStorage.visitas);
+    </script>
+    
+</body>
+</html>

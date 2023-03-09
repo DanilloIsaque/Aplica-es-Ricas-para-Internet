@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            height:70px;
+            width:100px;
+            padding: 10px;
+          
+            display: flex;
+           margin:30px;
+
+        }
+        #centro{
+           display: inline-block;
+           background-color: aqua;
+           margin: 30px;
+           width:30%
+        }
+        #drag1{
+            display:block;
+            margin:auto;
+        }
+        #titulo{
+            display: block;
+            margin:auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        #tudo{
+            background-color: blue;
+            display: flex;
+        }
+        #centro2{
+            display: inline-block;
+
+           margin: 30px;
+        }
+    </style>
+    <script >
+        function allowDrop(ev){
+            ev.preventDefault();// impede a acao padrao de impedir que um elemento seja arrastado
+            /* o parametro ev é o objeto de evento q é passado a função allowDrop quando ela é chamada
+            essa função é usada para permitire que o elemento alvo da operação do arrastar e soltar receba o elemento            */
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("text", ev.target.id);
+            /*
+            essa função [e chamada] quando se inicia um arrasto de um elemento.
+            o parametro ev é um objeto de evento que representa o evento de arrastar.
+            dentro da função , é usado o método setData do objeto dataTransfer preesente
+            no objeto de evento para armazerar um valor de texto associado a chave text.
+            este valor de texto é o id do elemebto q está sendo arrastado, obtido através da propriedade
+            target.id
+            o objeto dataTransfer é um objeto que permite a transferência de dados entre elementos durante uma operação
+            de arrastar e soltar
+            ao armazenar o id do elemento sendo arrastado como um valor de rexro, podemos recuperá-lo posteriormente na função drop e usá-lo para adicionar o elemento 
+            arrastado como filho do elemento destino.
+            */
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text")// tem q ser uma string;
+            ev.target.appendChild(document.getElementById(data));
+            /*
+            a função drop é chamada quando um elemento é solto em outro elemento
+            a 2 linha define uma variavel data e atribui a ela o valor retornado pelo metodo getdata do objeto
+            dataTransfet presente no objeto de evento. o método getData recupera o valor de texto armazenado anteriormente na função
+            drag com a ccahve text;
+            este valor de texto é o id do elemento que que esta sendo arrastado.
+            na 3 linha , o metodo appendChild é chamado no elemento de destino usando o objeto target(destino) presente no objeto de evento
+
+         este metodo adiciona o elemento com o id recuperado na variaveç data comop um filho no elemento de destino.
+         isso permite que o elemento seja arrastado posicionado dentro do elemento de destino como resultado da operação de soltar
+            */
+
+
+
+            //ondrop especifica a funcao javascript a ser chamada quando um elemento é solto dentro  deste elemento div
+            //o valor drop(event) inica que a função drop deve ser chamada  e q o objeto de evebbto dbev ser passado como paramatreo para a funcao
+            //ondragover
+        }
+    </script>
+</head>
+
+<body>
+<div id="tudo">
+    
+   
+<div id="centro">
+    <h1 id="titulo">Fazer</h1>
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)">
+         </div>
+    
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)">
+         </div>
+    
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)">
+         </div>
+ 
+  
+    
+</div>
+
+<div id="centro">
+    <h1 id="titulo">Fazendo</h1>
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)">
+       
+    </div>
+    
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)"></div>
+      
+    
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)"></div>
+        
+
+
+    
+</div>
+<div id="centro">
+    <h1 id="titulo">Feito</h1>
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)">
+       
+    </div>
+    
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)"></div>
+      
+    
+    <div id="div1" ondrop ="drop(event)" ondragover="allowDrop(event)"></div>
+        
+ 
+
+
+    
+</div>
+
+</div>
+   <br>
+   <br>
+   <br> 
+ <div id="centro2">
+   <textarea id="drag11" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+   <br>
+   <textarea id="drag2" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+   <br>
+   <textarea id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+   <br>
+  
+   
+</div>
+<div id="centro2">
+    <textarea id="drag11" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+    <br>
+    <textarea id="drag2" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+    <br>
+    <textarea id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+    <br>
+    
+    
+ </div>
+ <div id="centro2">
+    <textarea id="drag11" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+    <br>
+    <textarea id="drag2" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+    <br>
+    <textarea id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" rows="4" cols="20"></textarea>
+    <br>
+ 
+   
+ </div>
+
+</body>
+</html>
