@@ -1,21 +1,21 @@
 var item;
 
 
+
+
+
+
 function add(){
     
-  
+
+
 
 
     sessionStorage.setItem("ITEM",item);
     
     item = document.getElementById("itemli").value;
-
-
-    var novoitem=document.createElement("li");
-    var conteudo= document.createTextNode(item);
-    novoitem.appendChild(conteudo);
-
-
+    document.getElementById("adicionado").innerText=item;
+   
     
 }
 function allowDrop(ev){

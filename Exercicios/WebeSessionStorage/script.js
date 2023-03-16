@@ -1,4 +1,5 @@
 
+
 var registro= prompt("Entre com seu nome:");
 localStorage.setItem("Nome",registro); //key do local storage,valor
 var endereco = prompt("qual seu endereco:");
