@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prova.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">Item para acrescentar na lista de compra</label>
+    <input type="text" name="itemli" id="itemli">
+    <button id="btn" onclick="add()">adicionar</button>
+
+    <div>
+        <p>Estoque da lanchonete</p>
+     <!---->
+        <ul>
+            <li id="adicionado" id="drag1" draggable="true" ondragstart="drag(event)"></li>
+        </ul>
+    </div>
+
+    <div id="quadrado"  ondrop ="drop(event)" ondragover="allowDrop(event)">
+    Arraste os itens aqui
+    </div>
+    <script src="prova.js"></script>
+</body>
+</html>
