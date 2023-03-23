@@ -5,9 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
+<style>
+    #fconf{
+        position:absolute;
+        top:0px;
+        left:0px;
+        border: 1px solid black;
+        background-color: #fff;
+        padding: 20px;
+        display:none; /*ela só vai aparecer quando apertarmos no botão opcções        */
+}
+</style>
 <body>
-    <form name="dados">
+    <h1>exemplo de WebStorage</h1>
+    <p id="painel"></p>
+    <button onclick="mostrarOpcoes()">opções</button>
+    <form name="fconf" id="fconf">
         <label >Nome</label><br>
         <input type="text" name="fnome" id="fnome" size="20"><br><br>
         <label>Cor fundo</label>
@@ -19,7 +34,7 @@
         <input type="radio" name="fcorT" onclick="defineCor(2,'#fff')">Branco<br>
         <input type="radio" name="fcorT" onclick="defineCor(2,'#ff0')">Amarelo<br><br>
         <input type="button" value="Gravar" onclick="gravar()"><br>
-
+        
     </form>
     <script src="scriptPainel.js"></script>
 </body>
