@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX2
+    </title>
+    <style>
+        #area{
+            background-color: green;
+            color:white;
+            width: 200px;
+            height:200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+ </head>
+ <body>
+  <!--  <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja
+    </div>
+-->
+<div id="area" >
+    interaja
+</div>
+    <script>
+//onclick vai disparar a função quando clicar
+var a = document.getElementById('area') // usa colchetes quando esta no plural    
+a.addEventListener('click',clicar)
+a.addEventListener('mouseenter',entrar)
+a.addEventListener('mouseout',sair)
+    function clicar(){
+            a.innerText='Clicou'
+        }
+            function entrar(){
+                a.innerText='entrou'
+                a.style.background='green'
+            }
+            function sair(){
+                a.innerText='saiu'
+                a.style.background='red'
+            }
+        
+    </script>
+ </body>
+ </html>

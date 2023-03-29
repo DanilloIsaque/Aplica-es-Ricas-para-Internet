@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sistema de multa</h1>
+    velcoidade: <input type="number" name="vel" id="vel">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="resultado"></div>
+    <div id="hora"></div>
+
+    <script>
+        function calcular(){
+        var vel= document.getElementById('vel');
+        var velocidade = Number(vel.value); 
+       var resultado =document.getElementById('resultado');
+       resultado.innerHTML = `<p>sua velocidade é de ${velocidade}</p> `
+        if(velocidade>60){
+            resultado.innerHTML += `<p> voce está multado`
+        
+        }
+        resultado.innerHTML+= `dirija com segurança`
+        var data = document.getElementById('hora');
+        var data2= new Date();
+        var hora = data2.getHours();
+        data.innerHTML = `voce verificou na hora de ${hora} horas`;
+    
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(68,125,199);
+            color: white;
+            font:normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inicio dos Estudos</h1>
+    <p>resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong></p>
+    <div id="msg" name="msg">clique aqui</div>
+    <script>
+      //  document.write(window.document.URL) mostra a url
+        //selecionar por marca
+        var p1= document.getElementsByTagName('p')[1];//0 é o primeiro paragrafo
+        p1.style.color='blue';
+        document.write(p1.innerText);//traz sem a formatação
+        document.write(p1.innerHTML);// traz a formatação completa
+        
+        
+        var d = document.getElementById('msg');
+       // d.innerText= 'estou aguardando' altera o conteudo
+      // d.style.background='green'
+
+      var x = document.getElementByName('msg')[0];
+
+
+      //por seletor
+      var y= document.querySelector('div#msg');
+    </script>
+</body>
+</html>
