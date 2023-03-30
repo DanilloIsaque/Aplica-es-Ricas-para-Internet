@@ -1,0 +1,12 @@
+#fundo{
+    box-shadow:2px 2px 2px 2px black;
+    width: 900px;
+    margin-left: 25%;
+}
+#centro{
+    text-align: center;
+}
+.espaco{
+    margin: 1px;
+    background-color: greenyellow;
+}

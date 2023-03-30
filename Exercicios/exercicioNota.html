@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercicioNota.css">
+
+</head>
+
+<body>
+<div id="fundo">
+    <div id="centro">
+    <video src="video.mp4" 
+    width="500px" 
+    height="400px" id="vid"></video>
+        <div>
+            <button id="playVideoBtn" class="espaco" onclick="play()"> Começar</button>
+            <button id="pauseVideoBtn" class="espaco" onclick="pause()">Pausar</button>
+            <button id="muteVideoBtn" class="espaco" onclick="mute()">Mute</button>
+            <button id="rewindVideoBtn"  class="espaco" onclick="rewind()">Retroceder</button>
+            <button id="forwardVideoBtn" class="espaco"onclick="forward()" >Avançar</button>
+            <button id="fullVideoBtn" class="espaco" onclick="full()">Tela cheia</button>
+            
+        </div>
+    </div>
+</div>
+<script src="exercicioNota.js"></script>
+</body>
+</html>
