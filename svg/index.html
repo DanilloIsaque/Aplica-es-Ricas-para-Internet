@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <svg width="500px" height="500px">
+        <circle cx="250px" 
+        cy="250" 
+        r="50" 
+        fill="red"
+        stroke="black"
+        stroke-width="1" ></circle>
+         <!--retangulo-->
+        <rect x="60px" 
+        y="400px" 
+        width="500"
+        height="50"
+        fill="blue"
+        rx="10"
+        fill-opacity="0.5"
+        ></rect>
+         <!--elipse-->
+        <ellipse cx="380"
+         cy="360"
+         rx="80"
+         fill="red"
+         fill-opacity="0.5"
+         stroke="black">
+            
+        </ellipse>  
+        <!--triangulo  x,y na proporcao da tela-->
+        <polygon points="100,183  300,182 200,38"
+        fill="black">
+
+        </polygon> 
+        <!--losango-->
+        <polygon points="200,200  300,350 400,200 300,50"
+        fill="grey">
+        </polygon>
+         <!--hexagono-->
+         <polygon points="90,15  150,15 190,75 150,135 90,135 50,75"
+         fill="blue">
+         </polygon>
+           <!--estrela-->
+           <polygon points="38,166 16,266 76,158 5,188 60,236 50,120"
+           fill="green">
+           </polygon>
+           <!--desenhar linhas-->
+           <line x1="250" y1="150"
+           x2="450" y2="450"
+           stroke="blue"
+           stroke-width="3"></line>
+           <!--outra forma-->
+           <polyline fill="none"
+           stroke="black"
+           stroke-width="3"
+           points="50,100 450,100"></polyline>
+    </svg>
+</body>
+</html>
