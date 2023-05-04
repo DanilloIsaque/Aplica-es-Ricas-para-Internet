@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <svg width="300" height="200">
+        <!-- Desenha linhas verticais do reticulado -->
+        <g stroke="lightgray" stroke-width="0.5">
+          <line x1="50" y1="0" x2="50" y2="200" />
+          <line x1="100" y1="0" x2="100" y2="200" />
+          <line x1="150" y1="0" x2="150" y2="200" />
+          <line x1="200" y1="0" x2="200" y2="200" />
+          <line x1="250" y1="0" x2="250" y2="200" />
+        </g>
+      
+        <!-- Desenha linhas horizontais do reticulado -->
+        <g stroke="lightgray" stroke-width="0.5">
+          <line x1="0" y1="50" x2="300" y2="50" />
+          <line x1="0" y1="100" x2="300" y2="100" />
+          <line x1="0" y1="150" x2="300" y2="150" />
+        </g>
+      
+        <!-- Desenha o eixo X -->
+        <line x1="0" y1="0" x2="300" y2="00" stroke="gray" stroke-width="1" />
+        <!-- Desenha o eixo Y -->
+        <line x1="0" y1="0" x2="0" y2="200" stroke="gray" stroke-width="1" />
+      
+        
+      
+        <!-- Desenha os valores das coordenadas -->
+        <g font-size="8" font-family="sans-serif" fill="black">
+          <text x="50" y="190">50</text>
+          <text x="100" y="190">100</text>
+          <text x="150" y="190">150</text>
+          <text x="200" y="190">200</text>
+          <text x="250" y="190">250</text>
+          <text x="5" y="50">50</text>
+          <text x="5" y="100">100</text>
+          <text x="5" y="150">150</text>
+        </g>
+
+        <path d="m 10 80 q 85 -70 170 0" stroke="black" fill="transparent" />
+        <path d="m 30 50 q 185 -60 180 0" stroke="black" fill="transparent" />
+        <path d="M 10 100 C 20 10, 90 10, 100 100 S 10 190 10 100"></path>
+        <circle cx="20" cy="10" r="3" fill="red" />
+        <circle cx="90" cy="10" r="3" fill="red" />
+
+    </svg>
+</body>
+</html>
